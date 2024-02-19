@@ -4,7 +4,7 @@ import Close from "../assets/Close.png";
 import { SearchBar } from "./SearchBar";
 
 export function NavBar () {
-    const [isHidden, setHidden] = useState(false)
+    const [isHidden, setHidden] = useState(true)
     
     const hideSearchbar = () => {
         setHidden(!isHidden)
@@ -15,11 +15,11 @@ export function NavBar () {
             <div className="text-white leading-[80px] text-[25px]">filmFusion</div>
             <div className="h-[80px] flex items-center justify-center">
                 {isHidden 
-                    ? <img src={search} onClick={hideSearchbar} alt="Search" />
-                    : <img src={Close} onClick={hideSearchbar} alt="Close" />
+                    ? <img src={search} onClick={hideSearchbar} className="cursor-pointer" alt="Search" />
+                    : <img src={Close} onClick={hideSearchbar} className="cursor-pointer" alt="Close" />
                 }
             </div>
         </div>
-        {!isHidden && <SearchBar hidden/>}
+        {!isHidden && <SearchBar search="Search..." close="x"/>}
     </div>
 }
