@@ -3,6 +3,12 @@
 @import 'tailwindcss/utilities';
 
 body {
-    background-color: #050206;
+    background-color: #FFFFFF;
+}
+
+@layer utilities {
+    .impact {
+        font-family: 'Cascadia Mono SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
 }
 
