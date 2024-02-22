@@ -10,4 +10,10 @@ body {
     .impact {
         font-family: 'Cascadia Mono SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
+    .itemShadow {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .filmsVote_averageOpacity {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
