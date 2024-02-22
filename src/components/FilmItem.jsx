@@ -2,8 +2,7 @@ import {percentageConverter} from '../helpers/index'
 
 export const FilmItem = props => {
     const {film} = props
-    const baseUrl = 'https://image.tmdb.org/t/p/w500/'
-    const imgUrl = `${baseUrl}${film.poster_path}`
+    const imgUrl = `https://image.tmdb.org/t/p/w500/${film.poster_path}`
     const filmTitle = film.title.length < 20 ? film.title : film.title.substring(0, 20).concat("...")
 
 
