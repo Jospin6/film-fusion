@@ -1,9 +1,9 @@
-import {percentageConverter} from '../helpers/index'
+import {percentageConverter, imageUrl, filmTitleLength} from '../helpers/index'
 
 export const FilmItem = props => {
     const {film} = props
-    const imgUrl = `https://image.tmdb.org/t/p/w500/${film.poster_path}`
-    const filmTitle = film.title.length < 20 ? film.title : film.title.substring(0, 20).concat("...")
+    const imgUrl = imageUrl(film.poster_path)
+    const filmTitle = filmTitleLength(film.title) 
 
 
     return <div className="col-span-2 mb-2 md:mb-0 rounded-lg itemShadow">
