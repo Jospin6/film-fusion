@@ -2,6 +2,7 @@ import {connect, useDispatch, useSelector} from 'react-redux'
 import { fetchFilmsGenders } from '../slices/filmsGenders'
 import { useEffect } from 'react'
 import { GenderItem } from '../components/GenderItem'
+import { Link } from 'react-router-dom'
 
 export const AllGenders = () => {
     const genders = useSelector((state) => state.genders)
@@ -20,7 +21,9 @@ export const AllGenders = () => {
                 Genders
             </div>
             {
-                genders.genders.map(gender => <GenderItem itemName={gender.name} key={gender.name}/>)
+                genders.genders.map(gender => 
+                    <GenderItem itemName={gender.name} key={gender.id}/> 
+                )
             }
         </div>
     )

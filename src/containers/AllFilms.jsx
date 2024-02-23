@@ -2,7 +2,8 @@ import { FilmItem } from "../components/FilmItem";
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchFilms, selectFilms, selectPage, selectTotalPage} from '../slices/films'
 import { useEffect } from "react";
-import { PaginationButton } from "../components/PageinationButton";
+import { PaginationButton } from "../components/PageinationButton"
+import { Link } from 'react-router-dom'
 
 export const AllFilms = () => {
 
@@ -28,7 +29,9 @@ export const AllFilms = () => {
             <div className=" grid grid-cols-4 gap-2 px-2 
             md:px-0 md:grid-cols-8 md:gap-4 h-auto pt-4"> 
                 {films.map(film => (
-                    <FilmItem film={film} key={film.id}/>
+                    <Link className="col-span-2 mb-2 md:mb-0 " to={`/singleFilm/${film.id}`} key={film.id}> 
+                        <FilmItem film={film}/>
+                    </Link>
                 ))}
             </div>
             <div className="w-full flex justify-center py-4">
