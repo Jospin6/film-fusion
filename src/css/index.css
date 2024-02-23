@@ -16,4 +16,7 @@ body {
     .filmsVote_averageOpacity {
         background-color: rgba(0, 0, 0, 0.5);
     }
+    .backdropOpacity {
+        background-color: rgba(15, 17, 48, 0.7);
+    }
 }

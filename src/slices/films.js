@@ -8,11 +8,14 @@ const initialState = {
     errors: '',
 }
 
-export const fetchFilms = createAsyncThunk('films/fetchFilms', (page) => {
-    return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=f88309ead70aa36df12d697b88f24280&page=${page}`)
-            .then(response => response.json())
-            .then(data => data)
-            .catch(error => error.message)
+export const fetchFilms = createAsyncThunk('films/fetchFilms', async (page) => {
+    try {
+        const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=f88309ead70aa36df12d697b88f24280&page=${page}`)
+        const data = await response.json()
+        return data
+    } catch (error) {
+        return error.message
+    }
 })
 
 export const films = createSlice({
