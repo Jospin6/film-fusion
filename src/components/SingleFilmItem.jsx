@@ -10,7 +10,7 @@ export const SingleFilmItem = (props) => {
             <h1 className="text-[40px] font-bold">{film.title}</h1>
             <div className='text-gray-300'> 
                 <span className='pr-2'>{film.release_date}</span> 
-                 <span>{film.genres.map(gender => <span> {gender.name} </span>)} </span>  
+                <span>{film.genres.map(gender => <span> {gender.name} </span>)} </span>  
             </div>
             <div className='mt-4'>
                 <div>
