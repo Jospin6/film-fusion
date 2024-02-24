@@ -1,7 +1,17 @@
+import { useEffect } from 'react'
 import { percentageConverter } from '../helpers/index'
+import {selectCasts, fetchFilmCasts} from '../slices/filmCats'
+import {useDispatch, useSelector} from 'react-redux'
 
 export const SingleFilmItem = (props) => {
     const {posterImage, film} = props
+    const casts = useSelector(selectCasts)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchFilmCasts(film.id))
+    })
+
     return <div className="grid grid-cols-8 gap-4">
         <div className="col-span-2 h-[75vh] rounded-lg">
             <img src={posterImage} className="h-[75vh] rounded-lg" alt={film.title} />
