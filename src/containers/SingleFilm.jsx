@@ -3,7 +3,7 @@ import { fetchFilmDetails, selectFilm } from '../slices/singleFilm'
 import {useDispatch, useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import { imageUrl, backgroundImage } from '../helpers/index'
-import { SingleFilmItem } from './SingleFilmItem';
+import { SingleFilmItem } from '../components/SingleFilmItem';
 
 export const SingleFilm = () => {
     const {id} =  useParams();
