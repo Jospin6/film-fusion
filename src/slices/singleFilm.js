@@ -3,6 +3,7 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 const initialState = {
     loading: false,
     film: [],
+    genres: [],
     errors: '',
 }
 
@@ -23,6 +24,7 @@ export const filmDetails = createSlice({
         builder.addCase(fetchFilmDetails.fulfilled, (state, action) => {
             state.loading = false
             state.film = action.payload
+            state.genres = action.payload.genres
             state.errors = ''
         })
         builder.addCase(fetchFilmDetails.rejected, (state, action) => {
@@ -34,5 +36,6 @@ export const filmDetails = createSlice({
 })
 
 export const selectFilm = state => state.film.film
+export const selectGenres = state => state.film.genres
 
 export default filmDetails.reducer

@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { fetchFilmDetails, selectFilm } from '../slices/singleFilm'
+import { fetchFilmDetails, selectFilm, selectGenres } from '../slices/singleFilm'
 import {useDispatch, useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import { imageUrl, backgroundImage } from '../helpers/index'
@@ -8,6 +8,7 @@ import { SingleFilmItem } from '../components/SingleFilmItem';
 export const SingleFilm = () => {
     const {id} =  useParams();
     const film = useSelector(selectFilm)
+    const genres = useSelector(selectGenres)
     const dispatch = useDispatch()
     const posterImage = imageUrl(film.poster_path)
     const backdropImage = backgroundImage(film.backdrop_path) 
@@ -19,7 +20,7 @@ export const SingleFilm = () => {
     return <div>
         <div className="w-full h-[80vh] relative" style={backdropImage}>
             <div className="w-full h-full absolute top-0 left-0 px-6 pt-4 backdropOpacity">
-                <SingleFilmItem posterImage={posterImage} film={film}/>
+                <SingleFilmItem posterImage={posterImage} genres={genres} film={film}/>
             </div>
         </div>
         <div>cast</div>
