@@ -1,6 +1,5 @@
-import { useEffect } from 'react'
 import { percentageConverter } from '../helpers/index'
-import {useDispatch, useSelector} from 'react-redux'
+
 
 export const SingleFilmItem = (props) => {
     const {posterImage, genres, film} = props
@@ -31,9 +30,6 @@ export const SingleFilmItem = (props) => {
                 <div className='mt-6'>
                     <div className='text-[20px]'>Synopsis</div>
                     <div className='text-gray-300 text-[14px] pt-[10px]'> {film.overview} </div>
-                </div>
-                <div className='mt-6'>
-                    <div className='text-[20px]'>Casts</div>
                 </div>
             </div>
         </div>
