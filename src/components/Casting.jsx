@@ -15,10 +15,10 @@ export const Casting = (props) => {
         scrollbar={{ draggable: true }}
         breakpoints={{
             576: {
-              slidesPerView: 1, // Pour les petits écrans custom-swiper-container
+              slidesPerView: 1, 
             },
             768: {
-              slidesPerView: 5, // Pour les écrans de taille moyenne
+              slidesPerView: 5,
             }
           }}
         >

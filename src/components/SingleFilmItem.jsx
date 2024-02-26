@@ -11,7 +11,7 @@ export const SingleFilmItem = (props) => {
 
     return <div className="grid grid-cols-8 gap-4">
         <div className="col-span-2 h-[75vh] rounded-lg">
-            <img src={posterImage} className="h-[75vh] rounded-lg" alt={film.title} />
+            <img src={posterImage} className="h-[65vh] rounded-lg" alt={film.title} />
         </div>
         <div className="col-span-6 text-white">
             <h1 className="text-[30px] pt-[50px] font-bold">{film.title}</h1>
@@ -28,7 +28,7 @@ export const SingleFilmItem = (props) => {
                     </div>
                 </div>
                 <div className='mt-6'>
-                    <div className='text-[20px]'>Synopsis</div>
+                    <div className='text-[20px] font-bold'>Synopsis</div>
                     <div className='text-gray-300 text-[14px] pt-[10px]'> {film.overview} </div>
                 </div>
             </div>

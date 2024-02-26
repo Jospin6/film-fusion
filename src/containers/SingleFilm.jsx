@@ -23,13 +23,13 @@ export const SingleFilm = () => {
     }, [])
 
     return <div className="h-[auto] pb-[50px]">
-        <div className="w-full h-[80vh] relative" style={backdropImage}>
+        <div className="w-full h-[70vh] relative" style={backdropImage}>
             <div className="w-full h-full absolute top-0 left-0 px-6 pt-4 backdropOpacity">
                 <SingleFilmItem posterImage={posterImage} genres={genres} film={film}/>
             </div>
         </div>
         <div className='pt-2 px-2'>
-            <div className='text-[25px] py-4'>Casts</div>
+            <div className='text-[25px] py-4'>Cast</div>
             <Casting casts={casts}/>
         </div>
     </div>
