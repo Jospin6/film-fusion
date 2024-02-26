@@ -6,7 +6,7 @@ export const FilmItem = props => {
     const filmTitle = filmTitleLength(film.title) 
 
 
-    return <div className="col-span-2 mb-2 md:mb-0 rounded-lg itemShadow">
+    return <div className="rounded-lg itemShadow">
         <div className="w-full h-[200px] bg-red-400 rounded-t-lg relative">
             <img src={imgUrl} alt={film.title} className="w-full h-[200px] rounded-t-lg" />
             <div className="absolute text-[12px] top-[5px] left-[5px] w-[40px] h-[40px] text-white 

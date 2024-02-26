@@ -11,8 +11,18 @@ const filmTitleLength = title => {
     return title.length < 20 ? title: title.substring(0, 20).concat("...")
 }
 
+const backgroundImage = url => {
+    return{
+        backgroundImage: `url(${imageUrl(url)})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+    }
+     
+}
+
 export {
     percentageConverter,
     imageUrl,
-    filmTitleLength
+    filmTitleLength,
+    backgroundImage
 }
