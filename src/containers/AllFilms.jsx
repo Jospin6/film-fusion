@@ -1,6 +1,6 @@
 import { FilmItem } from "../components/FilmItem";
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchFilms, selectFilms, selectPage, selectTotalPage} from '../slices/films'
+import { fetchFilms, selectFilms, selectPage, selectTotalPage, selectgender} from '../slices/films'
 import { useEffect } from "react";
 import { PaginationButton } from "../components/PageinationButton"
 import { Link } from 'react-router-dom'
@@ -10,19 +10,29 @@ export const AllFilms = () => {
     const films = useSelector(selectFilms)
     const currentPage = useSelector(selectPage)
     const totalPages = useSelector(selectTotalPage)
+    const currentGender = useSelector(selectgender)
     const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(fetchFilms(currentPage))
-    }, [currentPage])
-
+    
     const handleNextPage = () => {
-        currentPage < totalPages && dispatch(fetchFilms(currentPage + 1))
+        currentPage < totalPages && dispatch(fetchFilms({
+            gender: currentGender, 
+            page: currentPage + 1
+        }))
     };
 
     const handlePrevPage = () => {
-        currentPage > 1 && dispatch(fetchFilms(currentPage - 1))
+        currentPage > 1 && dispatch(fetchFilms({
+            gender: currentGender, 
+            page: currentPage - 1
+        }))
     };
+
+    useEffect(() => {
+        dispatch(fetchFilms({
+            gender: currentGender, 
+            page: currentPage
+        }))
+    }, [currentGender,currentPage])
 
     return (
         <div className="order-2 md:order-1 md:col-span-6">

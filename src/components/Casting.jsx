@@ -24,7 +24,8 @@ export const Casting = (props) => {
         >
         {casts.map(cast => {
             if (cast.order < 10) {
-                return <SwiperSlide className='col-span-2 h-[300px] rounded-lg mr-2 text-[14px] itemShadow text-black' key={cast.cast_id}>
+                return <SwiperSlide className='col-span-2 h-[300px] rounded-lg mr-2 
+                text-[14px] itemShadow mb-4 text-black' key={cast.cast_id}>
                     <div className='w-full h-[200px]'>
                         <img src={imageUrl(cast.profile_path)} 
                         className='w-full rounded-t-lg h-[200px]' 

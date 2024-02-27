@@ -13,7 +13,7 @@ export function NavBar () {
 
     return <div>
         <div className="w-full h-[80px] flex justify-between border-b-[1px] border-gray-300 px-[20px] md:px-[50px]">
-            <div className="text-[#FF1E27] leading-[80px] text-[20px] md:text-[35px] impact">
+            <div className="text-[#FF1E27] leading-[80px] text-[20px] md:text-[35px] cascadia">
                 <Link to={"/"}>filmFusion</Link>
             </div>
             <div className="h-[80px] flex items-center justify-center">
