@@ -9,27 +9,27 @@ export const SingleFilmItem = (props) => {
         width: `${vote_average}`,
     } 
 
-    return <div className="grid grid-cols-8 gap-4">
-        <div className="col-span-2 h-[75vh] rounded-lg">
-            <img src={posterImage} className="h-[65vh] rounded-lg" alt={film.title} />
+    return <div className="grid grid-cols-1 md:grid-cols-8 md:gap-4">
+        <div className="md:col-span-2 col-span-1 h-[65vh] rounded-lg">
+            <img src={posterImage} className="md:h-[65vh] h-full w-full rounded-lg" alt={film.title} />
         </div>
-        <div className="col-span-6 text-white">
-            <h1 className="text-[30px] pt-[50px] font-bold">{film.title}</h1>
+        <div className="md:col-span-6 col-span-1 text-white">
+            <h1 className="md:text-[30px] text-[20px] md:pt-[50px] font-bold">{film.title}</h1>
             <div className='text-gray-300 text-[14px]'> 
                 <span className='pr-2'>{film.release_date}</span> 
                 <span>{genres.map(gender => <span key={gender.id}> {gender.name} </span>)} </span>
             </div>
-            <div className='mt-4'>
+            <div className='md:mt-4 mt-2'>
                 <div className='w-[100px]'>
-                    <span className='text-[25px]'>{vote_average}</span>
+                    <span className='md:text-[25px] text-[20px]'>{vote_average}</span>
                     <span className='pl-2 text-[14px] font-bold'>Score</span>
                     <div className='w-full h-[5px] rounded-full bg-gray-600'>
                         <div className='bg-yellow-500 h-[5px] rounded-full' style={percentageStyle}></div>
                     </div>
                 </div>
-                <div className='mt-6'>
-                    <div className='text-[20px] font-bold'>Synopsis</div>
-                    <div className='text-gray-300 text-[14px] pt-[10px]'> {film.overview} </div>
+                <div className='md:mt-6 mt-2'>
+                    <div className='md:text-[20px] text-[16px] font-bold'>Synopsis</div>
+                    <div className='text-gray-300 md:text-[14px] text-[12px] pt-[10px]'> {film.overview} </div>
                 </div>
             </div>
         </div>

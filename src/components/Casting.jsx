@@ -9,13 +9,13 @@ export const Casting = (props) => {
     return <Swiper 
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={30}
-        slidesPerView={1}
+        slidesPerView={2}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         breakpoints={{
             576: {
-              slidesPerView: 1, 
+              slidesPerView: 2, 
             },
             768: {
               slidesPerView: 5,
