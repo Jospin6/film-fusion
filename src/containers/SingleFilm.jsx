@@ -22,7 +22,7 @@ export const SingleFilm = () => {
         dispatchCast(fetchCast(id))
     }, [])
 
-    return <div className="h-[auto] pb-[50px]">
+    return <div className="h-[auto] pb-[20px]">
         <div className="w-full h-[800px] md:h-[70vh] md:relative" style={backdropImage}>
             <div className="w-full h-full md:absolute md:top-0 md:left-0 md:px-6 md:pt-4 p-2 backdropOpacity">
                 <SingleFilmItem posterImage={posterImage} genres={genres} film={film}/>

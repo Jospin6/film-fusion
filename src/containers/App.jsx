@@ -3,6 +3,7 @@ import { NavBar } from "../components/NavBar"
 import { Body } from './Body'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SingleFilm } from './SingleFilm'
+import { Footer } from './Footer';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
             <Route exact path="/" element={<Body/>} />
             <Route path="/singleFilm/:id" element={<SingleFilm/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   )
