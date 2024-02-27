@@ -1,12 +1,17 @@
-import {connect, useDispatch, useSelector} from 'react-redux'
+import { useDispatch, useSelector} from 'react-redux'
 import { fetchFilmsGenders } from '../slices/filmsGenders'
 import { useEffect } from 'react'
 import { GenderItem } from '../components/GenderItem'
 import { Link } from 'react-router-dom'
+import {setGender} from '../slices/films'
 
 export const AllGenders = () => {
     const genders = useSelector((state) => state.genders)
     const dispatch = useDispatch()
+
+    const handleChangeGender = (genderId) => {
+        dispatch(setGender(genderId))
+    }
 
     useEffect(() => {
         dispatch(fetchFilmsGenders())
@@ -22,7 +27,7 @@ export const AllGenders = () => {
             </div>
             {
                 genders.genders.map(gender => 
-                    <GenderItem itemName={gender.name} key={gender.id}/> 
+                    <GenderItem onclick={() => handleChangeGender(gender.id)} itemName={gender.name} key={gender.id}/> 
                 )
             }
         </div>
