@@ -1,15 +1,29 @@
-import { useState } from "react";
-import search from "../assets/search.png";
-import Close from "../assets/Close.png";
-import { SearchBar } from "./SearchBar";
+import { useEffect, useState } from "react"
+import search from "../assets/search.png"
+import Close from "../assets/Close.png"
+import { SearchBar } from "./SearchBar"
 import { Link } from 'react-router-dom'
+import {checkHidden, setHidden, queryField, fetchSearchFilm,setQuery, searchedFilm} from '../slices/searchFilm'
+import {useSelector, useDispatch} from 'react-redux'
+import { SearchedFilm } from "./SearchedFilmsItems"
 
 export function NavBar () {
-    const [isHidden, setHidden] = useState(true)
+    const isHidden = useSelector(checkHidden)
+    const searchedValue = useSelector(queryField)
+    const films = useSelector(searchedFilm)
+    const dispatch = useDispatch()
     
     const hideSearchbar = () => {
-        setHidden(!isHidden)
+        dispatch(setHidden(!isHidden))
+        dispatch(setQuery(''))
     }
+
+
+    useEffect(() => {
+        if (searchedValue !== '') {
+            dispatch(fetchSearchFilm(searchedValue))
+        }
+    }, [searchedValue])
 
     return <div>
         <div className="w-full h-[80px] flex justify-between border-b-[1px] border-gray-300 px-[20px] md:px-[50px]">
@@ -24,5 +38,6 @@ export function NavBar () {
             </div>
         </div>
         {!isHidden && <SearchBar placeholder="Search..." close="x"/>}
+        {films && <SearchedFilm films={films}/>}
     </div>
 }

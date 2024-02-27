@@ -11,6 +11,10 @@ const filmTitleLength = title => {
     return title.length < 20 ? title: title.substring(0, 20).concat("...")
 }
 
+const longText = text => {
+    return text.length < 100 ? text: text.substring(0, 100).concat("...")
+}
+
 const backgroundImage = url => {
     return{
         backgroundImage: `url(${imageUrl(url)})`,
@@ -20,9 +24,13 @@ const backgroundImage = url => {
      
 }
 
+const emptyArray = (array) => array = []
+
 export {
     percentageConverter,
     imageUrl,
     filmTitleLength,
-    backgroundImage
+    backgroundImage,
+    longText,
+    emptyArray
 }
