@@ -1,10 +1,16 @@
 
 export const GenderItem = props => {
-    const {itemName, onclick} = props
-    return <div className="w-full h-[40px] text-gray-600 pl-4 
+    const {itemName, onclick, isSelected} = props
+    const classAtributes = `w-full h-[40px] pl-4 
     cursor-pointer md:mb-[5px] leading-[40px] text-[16px]
-    md:hover:bg-[#D5D5D5] hover:text-black hover:font-bold
-    hover:rounded-tl-lg md:hover:rounded-lg" onClick={onclick}>
+    md:hover:border-r-2 md:hover:border-red-500 hover:text-black hover:font-bold
+    md:hover:itemShadow rounded-lg md:ml-2`
+    return <div className={
+        isSelected ? 
+        classAtributes.concat(` text-black font-bold md:border-r-2 border-red-500 md:itemShadow`) 
+        : classAtributes.concat(` text-gray-600`) 
+        } 
+        onClick={onclick}>
         {itemName}
     </div>
 }
