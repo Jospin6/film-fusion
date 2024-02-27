@@ -6,8 +6,8 @@ const initialState = {
     error: '',
 }
 
-export const fetchCast = createAsyncThunk('cast/fetchCast', (id) => {
-    return fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f88309ead70aa36df12d697b88f24280`)
+export const fetchCast = createAsyncThunk('cast/fetchCast', async (id) => {
+    return await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f88309ead70aa36df12d697b88f24280`)
             .then(response => response.json())
             .then(data => data)
             .catch(error => error.message)
