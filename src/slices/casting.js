@@ -1,4 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
+import {api_key} from '../helpers/index'
 
 const initialState = {
     loading: false,
@@ -7,7 +8,7 @@ const initialState = {
 }
 
 export const fetchCast = createAsyncThunk('cast/fetchCast', async (id) => {
-    return await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f88309ead70aa36df12d697b88f24280`)
+    return await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`)
             .then(response => response.json())
             .then(data => data)
             .catch(error => error.message)

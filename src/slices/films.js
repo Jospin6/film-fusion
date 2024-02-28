@@ -1,4 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
+import {api_key} from '../helpers/index'
 
 const initialState = {
     loading: false,
@@ -11,8 +12,8 @@ const initialState = {
 
 export const fetchFilms = createAsyncThunk('films/fetchFilms', async ({gender,page}) => {
     let url = gender ? 
-    `https://api.themoviedb.org/3/discover/movie?api_key=f88309ead70aa36df12d697b88f24280&with_genres=${gender}&page=${page}`
-    : `https://api.themoviedb.org/3/discover/movie?api_key=f88309ead70aa36df12d697b88f24280&page=${page}`
+    `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&with_genres=${gender}&page=${page}`
+    : `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&page=${page}`
     return await fetch(url)
             .then(response => response.json())
             .then(data => data)

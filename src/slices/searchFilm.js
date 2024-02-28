@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import {api_key} from '../helpers/index'
 
 const initialState = {
     loading: false,
@@ -9,7 +10,7 @@ const initialState = {
 }
 
 export const fetchSearchFilm = createAsyncThunk('search/fetchSearchFilm', async (query) => {
-    return await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=f88309ead70aa36df12d697b88f24280`)
+    return await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${api_key}`)
             .then(response => response.json())
             .then(data => data)
             .catch(error => error.message)
