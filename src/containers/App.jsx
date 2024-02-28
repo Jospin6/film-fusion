@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { NavBar } from "../components/NavBar"
 import { Body } from './Body'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
