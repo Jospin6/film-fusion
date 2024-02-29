@@ -1,5 +1,8 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import {api_key} from '../helpers/index'
+import dotenv from 'dotenv'
+dotenv.config()
+
+const API_KEY = process.env.API_KEY
 
 const initialState = {
     loading: false,
@@ -9,7 +12,7 @@ const initialState = {
 }
 
 export const fetchFilmDetails = createAsyncThunk("film/fetchFilmDetails", async (film_id) => {
-    return await fetch(`https://api.themoviedb.org/3/movie/${film_id}?api_key=${api_key}`)
+    return await fetch(`https://api.themoviedb.org/3/movie/${film_id}?api_key=${API_KEY}`)
             .then(response => response.json())
             .then(data => data)
             .catch(error => error.message)
