@@ -49,10 +49,10 @@ export const films = createSlice({
     }
 })
 
-export const selectFilms = (state) => state.films.films
-export const selectPage = (state) => state.films.page
-export const selectTotalPage = (state) => state.films.total_pages
-export const selectgender = (state) => state.films.gender
+export const selectFilms = state => state.films.films
+export const selectPage = state => state.films.page
+export const selectTotalPage = state => state.films.total_pages
+export const selectgender = state => state.films.gender
 export const { setGender } = films.actions;
 
 export default films.reducer
