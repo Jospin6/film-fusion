@@ -1,8 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import dotenv from 'dotenv'
-dotenv.config()
-
-const API_KEY = process.env.API_KEY
+import {API_KEY} from '../helpers/index'
 
 const initialState = {
     loading: false,
