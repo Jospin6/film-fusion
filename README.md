@@ -9,9 +9,11 @@
 
 <hr />
 
-<hr />
-
 > The details page it basically provide the details about a specific film.
+
+![screenshot](./details.png)
+
+<hr />
 
 ## Built With
 
