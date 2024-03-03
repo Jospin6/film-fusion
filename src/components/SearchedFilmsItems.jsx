@@ -6,7 +6,7 @@ export const SearchedFilm = (props) => {
     return <div className="w-full h-auto py-2">
         {films.map(film => 
             (
-                <Link to={`/singleFilm/${film.id}`} key={film.id} onClick={emptyArray(films)}
+                <Link to={`../containers/singleFilm/${film.id}`} key={film.id} onClick={emptyArray(films)}
                 className="h-[150px] rounded-lg mb-4 itemShadow flex mx-4">
                     <div className="h-full w-[100px] rounded-l-lg">
                         <img src={imageUrl(film.poster_path)} alt={film.title} className='h-full w-[100px] rounded-l-lg' />
