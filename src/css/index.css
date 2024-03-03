@@ -1,1 +1,22 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
+body {
+    background-color: #FFFFFF;
+}
+
+@layer utilities {
+    .cascadia {
+        font-family: 'Cascadia Mono SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .itemShadow {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .filmsVote_averageOpacity {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .backdropOpacity {
+        background-color: rgba(15, 17, 48, 0.7);
+    }
+}
