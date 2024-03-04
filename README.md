@@ -26,7 +26,7 @@
 
 ## Live Demo
 
-[Live Demo Link]
+[Live Demo Link](https://filmsfusion.netlify.app/)
 
 ## Getting Started
 
