@@ -10,7 +10,7 @@ export const SearchedFilm = (props) => {
             (
                 <Link
                 to={`/singleFilm/${film.id}`} key={film.id}>
-                    <SearchedItem film={film} onclic={makeArrayEmpty()}/>
+                    <SearchedItem film={film}/>
                 </Link>
             )
         )

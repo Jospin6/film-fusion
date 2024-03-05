@@ -1,7 +1,7 @@
 import {imageUrl, longText} from '../helpers/index'
 export const SearchedItem = (props) => {
-    const {film, onclic} = props
-    return <div onClick={onclic} className="h-[150px] rounded-lg mb-4 itemShadow flex mx-4">
+    const {film} = props
+    return <div className="h-[150px] rounded-lg mb-4 itemShadow flex mx-4">
         <div className="h-full w-[100px] rounded-l-lg">
             <img src={imageUrl(film.poster_path)} alt={film.title} className='h-full w-[100px] rounded-l-lg' />
         </div>
