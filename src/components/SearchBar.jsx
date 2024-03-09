@@ -13,7 +13,8 @@ export const SearchBar = ({placeholder, close}) => {
         dispatch(setQuery(''))
     }
 
-    return <div className="text-gray-500 h-[40px] border-b-[1px] border-gray-300 px-[10px] md:px-[30px] 
+    return <div className="text-gray-500 h-[40px] border-b-[1px] 
+    border-gray-300 px-[10px] md:px-[30px] 
     leading-[40px] flex justify-between overflow-hidden">
         <div className='w-[95%]'> 
             <Input onChange={handleChange} search={inputValue} placeholder={placeholder}/> 
