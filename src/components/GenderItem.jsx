@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 
 export const GenderItem = props => {
     const {itemName, onclick, isSelected} = props
@@ -13,4 +14,10 @@ export const GenderItem = props => {
         onClick={onclick}>
         {itemName}
     </div>
+}
+
+GenderItem.propTypes = {
+    itemName: PropTypes.string.isRequired,
+    onclick: PropTypes.func.isRequired,
+    isSelected: PropTypes.bool.isRequired
 }
