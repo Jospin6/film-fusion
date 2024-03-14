@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 export const PaginationButton = ({onClick, text}) => {
     return <button className="px-4 border-2 border-gray-300 rounded-lg mr-4 
@@ -7,3 +7,8 @@ export const PaginationButton = ({onClick, text}) => {
         {text}
     </button>
 } 
+
+PaginationButton.propTypes = {
+    onClick: PropTypes.func.isRequired,
+    text: PropTypes.string.isRequired
+}
