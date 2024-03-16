@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { SearchedItem } from './SearchedItem'
+import PropTypes from 'prop-types';
 
 export const SearchedFilm = (props) => {
     const {films} = props
@@ -15,4 +16,8 @@ export const SearchedFilm = (props) => {
 
         }
     </div>
+}
+
+SearchedFilm.propTypes = {
+    films: PropTypes.array.isRequired
 }
