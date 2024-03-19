@@ -8,7 +8,7 @@ export const SearchedFilm = (props) => {
         {films.map(film => 
             (
                 <Link
-                to={`/singleFilm/:${film.id}`} key={film.id}>
+                to={`/singleFilm/${film.id}`} key={film.id}>
                     <SearchedItem film={film}/>
                 </Link>
             )
