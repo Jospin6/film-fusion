@@ -2,7 +2,6 @@ import { Input } from './Input';
 import PropTypes from 'prop-types';
 import {queryField, setQuery} from '../slices/searchFilm'
 import {useSelector, useDispatch} from 'react-redux'
-import { useEffect } from 'react';
 
 export const SearchBar = ({placeholder, close}) => {
     const inputValue = useSelector(queryField)

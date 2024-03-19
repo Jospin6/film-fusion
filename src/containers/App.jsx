@@ -8,14 +8,12 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <NavBar/>
-        <Routes>
-            <Route exact path="/" element={<Body/>} />
-            <Route path="/singleFilm/:id" element={<SingleFilm/>} />
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
+      <NavBar/>
+      <Routes>
+          <Route exact path="/" element={<Body/>} />
+          <Route path="/singleFilm/:id" element={<SingleFilm/>} />
+      </Routes>
+      <Footer/>
     </>
   )
 }
