@@ -28,7 +28,7 @@ export const Casting = (props) => {
                 text-[14px] itemShadow mb-4 text-black' key={cast.cast_id}>
                     <div className='w-full h-[200px]'>
                         <img src={imageUrl(cast.profile_path)} 
-                        className='w-full rounded-t-lg h-[200px]' 
+                        className='w-full rounded-t-lg h-[200px] object-fill' 
                         alt={cast.name} />
                     </div>
                     <div className='p-2'>
