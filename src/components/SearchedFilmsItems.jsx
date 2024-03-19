@@ -12,9 +12,7 @@ export const SearchedFilm = (props) => {
                     <SearchedItem film={film}/>
                 </Link>
             )
-        )
-
-        }
+        )}
     </div>
 }
 
