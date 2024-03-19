@@ -25,6 +25,9 @@ export const search = createSlice({
         },
         setHidden: (state, action) => {
             state.isHidden = action.payload
+        },
+        reseatFilms(state){
+            state.films = []
         }
     },
     extraReducers: (builder) => {
@@ -44,7 +47,7 @@ export const search = createSlice({
     }
 })
 
-export const {setQuery, setHidden} = search.actions
+export const {setQuery, setHidden, reseatFilms} = search.actions
 
 export const queryField = state => state.search.queryField
 export const checkHidden = state => state.search.isHidden
