@@ -8,9 +8,6 @@ export const SearchBar = ({placeholder, close}) => {
     const dispatch = useDispatch()
 
     const handleChange = (e) => dispatch(setQuery(e.target.value))
-    const resetSearch = () => {
-        dispatch(setQuery(''))
-    }
 
     return <div className="text-gray-500 h-[40px] border-b-[1px] 
     border-gray-300 px-[10px] md:px-[30px] 
@@ -19,7 +16,7 @@ export const SearchBar = ({placeholder, close}) => {
             <Input onChange={handleChange} search={inputValue} placeholder={placeholder}/> 
         </div>
         <div className='w-[5%] text-end'> 
-            <button className='cursor-pointer text-[20px] px-4' onClick={resetSearch}>
+            <button className='cursor-pointer text-[20px] px-4' >
                 { close }
             </button>
         </div>
@@ -29,6 +26,5 @@ export const SearchBar = ({placeholder, close}) => {
 
 
 SearchBar.propTypes = {
-    search: PropTypes.string.isRequired,
     close: PropTypes.string.isRequired
 }
