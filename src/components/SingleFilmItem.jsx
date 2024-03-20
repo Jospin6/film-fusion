@@ -1,4 +1,5 @@
 import { percentageConverter } from '../helpers/index'
+import PropTypes from 'prop-types'
 
 
 export const SingleFilmItem = (props) => {
@@ -34,4 +35,10 @@ export const SingleFilmItem = (props) => {
             </div>
         </div>
     </div>
+}
+
+SingleFilmItem.propTypes = {
+    posterImage: PropTypes.string.isRequired,
+    genres: PropTypes.array.isRequired,
+    film: PropTypes.object.isRequired
 }
