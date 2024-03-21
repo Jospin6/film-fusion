@@ -26,5 +26,6 @@ export const SearchBar = ({placeholder, close}) => {
 
 
 SearchBar.propTypes = {
-    close: PropTypes.string.isRequired
+    close: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired
 }
