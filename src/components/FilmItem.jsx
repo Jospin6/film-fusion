@@ -1,4 +1,5 @@
 import {percentageConverter, imageUrl, filmTitleLength} from '../helpers/index'
+import PropTypes from 'prop-types'
 
 export const FilmItem = props => {
     const {film} = props
@@ -23,4 +24,8 @@ export const FilmItem = props => {
             </div>
         </div>
     </div>
+}
+
+FilmItem.propTypes = {
+    film: PropTypes.object.isRequired
 }
