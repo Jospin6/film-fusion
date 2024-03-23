@@ -2,7 +2,6 @@ import { useDispatch, useSelector} from 'react-redux'
 import { fetchFilmsGenders, setGenderId } from '../slices/filmsGenders'
 import { useEffect } from 'react'
 import { GenderItem } from '../components/GenderItem'
-import { Link } from 'react-router-dom'
 import {setGender,selectgender} from '../slices/films'
 
 export const AllGenders = () => {
