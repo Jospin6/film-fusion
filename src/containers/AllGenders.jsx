@@ -1,5 +1,5 @@
 import { useDispatch, useSelector} from 'react-redux'
-import { fetchFilmsGenders, setGenderId } from '../slices/filmsGenders'
+import { fetchFilmsGenders } from '../slices/filmsGenders'
 import { useEffect } from 'react'
 import { GenderItem } from '../components/GenderItem'
 import {setGender,selectgender} from '../slices/films'
