@@ -25,6 +25,9 @@ export const search = createSlice({
         },
         setHidden: (state, action) => {
             state.isHidden = action.payload
+        },
+        setEmpty: (state) => {
+            state.films = []
         }
     },
     extraReducers: (builder) => {
