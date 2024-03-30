@@ -22,7 +22,7 @@
 - TMDB
 - Redux
 - Node js
-- Heroku
+- Netlify
 
 ## Live Demo
 
